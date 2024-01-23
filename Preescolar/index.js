@@ -1,7 +1,7 @@
 const $tiempo=document.querySelector(".tiempo");
 const $fecha=document.querySelector(".fecha");
 
-let horarioBachillerato= ['6:45:06 AM','7:40:00 AM','8:35:06 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:30:00 PM','3:10:00 PM']
+let horarioBachillerato= ['6:45:06 AM','7:40:00 AM','8:35:06 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:30:00 PM','3:25:00 PM']
 
 function digitalClock() {
     let f= new Date(),
@@ -9,14 +9,12 @@ function digitalClock() {
     mes=  f.getMonth(),
     anio= f.getFullYear(),
     diaSemana = f.getDay();
-    let timeString = f.toLocaleTimeString({
-        hour12: true,
-        timeZone:'America/Bogota'});
+    let timeString = f.toLocaleTimeString('en-US', {hour12: true,timeZone: 'America/Bogota'});
     $tiempo.innerHTML = timeString;
     $fecha.innerHTML = `${anio}-${mes+1}-${dia}`
-    console.log($tiempo.innerHTML);
     if(diaSemana > 0 & diaSemana < 6){
         for (const i of horarioBachillerato) {
+            console.log($tiempo.innerHTML === i, $tiempo.innerHTML, i);
             if($tiempo.innerHTML === i){
                 console.log("se logro",i);
                 timbreEscolar();
