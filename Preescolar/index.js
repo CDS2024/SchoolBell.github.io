@@ -1,27 +1,26 @@
 const $tiempo=document.querySelector(".tiempo");
 const $fecha=document.querySelector(".fecha");
 
+let horarioBachillerato= ['6:45:06 a.&nbsp;m.','7:40:00 a.&nbsp;m.','8:35:06 a.&nbsp;m.','9:05:06 a.&nbsp;m.','10:00:00 a.&nbsp;m.','10:55:06 a.&nbsp;m.','11:50:06 a.&nbsp;m.','12:50:06 p.&nbsp;m.','1:40:06 p.&nbsp;m.','2:30:26 p.&nbsp;m.']
+
 function digitalClock() {
     let f= new Date(),
     dia = f.getDate(),
     mes=  f.getMonth(),
     anio= f.getFullYear(),
     diaSemana = f.getDay();
-
-    const opcionesDeFormato = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false };
-
-    let timeString2 = f.toLocaleTimeString('es-ES', opcionesDeFormato);
     let timeString = f.toLocaleTimeString();
     let y ='1:31:10 p.&nbsp;m.';
     $tiempo.innerHTML = timeString;
-
     $fecha.innerHTML = `${anio}-${mes+1}-${dia}`
-    console.log($tiempo.innerHTML === y, $tiempo.innerHTML);
-    if($tiempo.innerHTML === y){
-        console.log("se logro");
-        timbreEscolar();
+    if(diaSemana > 0 & diaSemana < 6){
+        for (const i of horarioBachillerato) {
+            if($tiempo.innerHTML === i){
+                console.log("se logro",i);
+                timbreEscolar();
+            }
+        }
     }
-
 }
 setInterval(()=>{
     digitalClock()

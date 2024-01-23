@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+    color: #fff; 
+    text-shadow: 0 0 20px rgba(10,175, 230,1), 0 0 20px rgba(10,175, 230,0) ;
+    font-size: 5rem;
+    text-align: center;
+}
+.Curso{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+a:hover{
+    font-size: 6rem;
+}
