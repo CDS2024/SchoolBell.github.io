@@ -1,7 +1,7 @@
 const $tiempo=document.querySelector(".tiempo");
 const $fecha=document.querySelector(".fecha");
 
-let horarioBachillerato= ['6:45:06 a.&nbsp;m.','7:40:00 a.&nbsp;m.','8:30:06 a.&nbsp;m.','9:15:06 a.&nbsp;m.','9:45:00 a.&nbsp;m.','10:35:06 a.&nbsp;m.','12:15:06 p.&nbsp;m.','1:00:06 p.&nbsp;m.','1:40:06 p.&nbsp;m.','2:30:26 p.&nbsp;m.']
+let horarioBachillerato= ['6:45:06 a.&nbsp;m.','7:40:00 a.&nbsp;m.','8:30:06 a.&nbsp;m.','9:15:06 a.&nbsp;m.','9:45:00 a.&nbsp;m.','10:35:06 a.&nbsp;m.','12:15:06 p.&nbsp;m.','1:00:06 p.&nbsp;m.','1:40:06 p.&nbsp;m.','2:30:26 p.&nbsp;m.','2:40:00 p.&nbsp;m.','2:45:00 p.&nbsp;m.']
 
 function digitalClock() {
     let f= new Date(),
