@@ -21,12 +21,12 @@ main{
     place-content: center;
     justify-items: center
 }
-.tipo-horario{
+main .tipo-horario{
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.tipo-horario button{
+main .tipo-horario button{
     color: #fff; 
     text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10,175, 230,0) ;
     text-align: center;
