@@ -5,9 +5,9 @@ const reloj=document.querySelector('.reloj');
 const bachillerato=document.querySelector("#Bachillerato");
 const primaria=document.querySelector("#Primaria");
 
-primaria.addEventListener("click", ()=> {
+bachillerato.addEventListener("click", ()=> {
     onDisplay(); 
-    let horarioBachillerato= ['6:45:06 AM','7:40:00 AM','8:30:06 AM','9:15:06 AM','9:45:00 AM','10:35:06 AM','12:15:00 PM','1:00:00 PM','1:40:06 PM',,'2:10:00 PM','2:30:00 PM','1:00:00 PM', '2:05:00 PM','2:10:00 PM','2:15:00 PM']
+    let horarioBachillerato= ['6:45:06 AM', '7:00:00 AM','7:10:00 AM','7:20:00 AM','7:30:00 AM','7:50:00 AM','7:40:00 AM','8:30:06 AM','9:15:06 AM','9:45:00 AM','10:35:06 AM','11:25:00 AM','12:15:00 PM','1:00:00 PM','1:40:06 PM','2:30:00 PM']
     function digitalClock() {
         let f= new Date(),
         dia = f.getDate(),
@@ -38,9 +38,9 @@ function onDisplay() {
     reloj.style.display=(horarioTipo.style.display=="none")? "block":"none";
 }
 
-bachillerato.addEventListener("click", ()=> {
+primaria.addEventListener("click", ()=> {
     onDisplay(); 
-    let horarioBachillerato= ['6:45:06 AM','7:40:00 AM','8:35:06 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:10:00 PM','2:30:00 PM','2:05:00 PM','2:10:00 PM','2:15:00 PM']; 
+    let horarioPrimaria= ['6:45:06 AM', '7:00:00 AM','7:10:00 AM','7:20:00 AM','7:30:00 AM','7:50:00 AM','7:40:00 AM','8:35:00 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:30:00 PM']; 
     function digitalClock() {
         let f= new Date(),
         dia = f.getDate(),
@@ -52,7 +52,7 @@ bachillerato.addEventListener("click", ()=> {
         $fecha.innerHTML = `${anio}-${mes+1}-${dia}`
         console.log($tiempo.innerHTML);
         if(diaSemana > 0 & diaSemana < 6){
-            for (const i of horarioBachillerato) {
+            for (const i of horarioPrimaria) {
                 if($tiempo.innerHTML === i){
                     console.log("se logro",i);
                     timbreEscolar();
