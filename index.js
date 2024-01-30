@@ -4,10 +4,12 @@ const horarioTipo=document.querySelector('.tipo-horario');
 const reloj=document.querySelector('.reloj');
 const bachillerato=document.querySelector("#Bachillerato");
 const primaria=document.querySelector("#Primaria");
+const timbrebachillerato=document.querySelector("#timbreBachillerato");
+const timbreprimaria=document.querySelector("#timbrePrimaria");
 
 bachillerato.addEventListener("click", ()=> {
     onDisplay(); 
-    let horarioBachillerato= ['6:45:06 AM', '7:00:00 AM','7:10:00 AM','7:20:00 AM','7:30:00 AM','7:50:00 AM','7:40:00 AM','8:30:06 AM','9:15:06 AM','9:45:00 AM','10:35:06 AM','11:25:00 AM','12:15:00 PM','1:00:00 PM','1:40:06 PM','2:30:00 PM']
+    let horarioBachillerato= ['6:45:06 AM','7:40:00 AM','8:30:06 AM','9:15:06 AM','9:45:00 AM','10:35:06 AM','11:25:00 AM','12:15:00 PM','1:00:00 PM','1:40:06 PM','2:30:00 PM']
     function digitalClock() {
         let f= new Date(),
         dia = f.getDate(),
@@ -22,7 +24,7 @@ bachillerato.addEventListener("click", ()=> {
             for (const i of horarioBachillerato) {
                 if($tiempo.innerHTML === i){
                     console.log("se logro",i);
-                    timbreEscolar();
+                    timbrebachillerato.play();
                 }
             }
         }
@@ -40,7 +42,7 @@ function onDisplay() {
 
 primaria.addEventListener("click", ()=> {
     onDisplay(); 
-    let horarioPrimaria= ['6:45:06 AM', '7:00:00 AM','7:10:00 AM','7:20:00 AM','7:30:00 AM','7:50:00 AM','7:40:00 AM','8:35:00 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:30:00 PM']; 
+    let horarioPrimaria= ['6:45:06 AM','7:40:00 AM','8:35:00 AM','9:05:06 AM','10:00:00 AM','10:55:06 AM','11:50:06 AM','12:50:06 PM','1:40:06 PM','2:30:00 PM']; 
     function digitalClock() {
         let f= new Date(),
         dia = f.getDate(),
@@ -55,7 +57,7 @@ primaria.addEventListener("click", ()=> {
             for (const i of horarioPrimaria) {
                 if($tiempo.innerHTML === i){
                     console.log("se logro",i);
-                    timbreEscolar();
+                    timbreprimaria.play();
                 }
             }
         }
@@ -74,14 +76,5 @@ function onDisplay() {
 
 
 
-function timbreEscolar() {
-    // Obtener el elemento de audio
-    const elementoAudio = document.getElementById('sonidoTimbre');
-  
-    // Reproducir el sonido
-    elementoAudio.play();
-  
-    // Puedes agregar otras acciones aquí si es necesario
-    console.log("¡Ring! ¡Ring! ¡Ring! Es hora de cambiar de clase.");
-}
+
 
